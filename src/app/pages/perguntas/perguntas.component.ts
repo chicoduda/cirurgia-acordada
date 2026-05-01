@@ -12,7 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule, FormGroup } from '@angular/forms';
+import { FormsModule, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatProgressSpinner } from "@angular/material/progress-spinner";
 import { MatOption } from "@angular/material/select";
 
@@ -25,6 +25,7 @@ interface Pergunta {
 
 @Component({
   selector: 'app-perguntas',
+  standalone: true,
   templateUrl: './perguntas.component.html',
   styleUrls: ['./perguntas.component.scss'],
   imports: [MatCellDef,
@@ -44,7 +45,8 @@ interface Pergunta {
     MatInputModule,
     FormsModule, 
     MatProgressSpinner, 
-    MatOption
+    MatOption,
+    ReactiveFormsModule
 ],
 })
 export class PerguntasComponent implements OnInit {
