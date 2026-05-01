@@ -1,0 +1,49 @@
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+mat-toolbar.toolbar {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card-form, .card-lista {
+  padding: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.acoes {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.tabela {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.carregando {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sem-dados {
+  text-align: center;
+  color: #888;
+  padding: 12px;
+  font-style: italic;
+}

@@ -1,0 +1,31 @@
+.main-container {
+    height: 100vh;
+  }
+  
+  .sidenav {
+    width: 230px;
+  }
+  
+  .sidenav-header {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .toolbar-title {
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  
+  .content-area {
+    padding: 16px;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 64px);
+  }
+  

@@ -1,0 +1,49 @@
+<mat-sidenav-container class="main-container">
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    [(opened)]="sidenavOpened"
+    class="sidenav"
+  >
+    <mat-toolbar color="primary" class="sidenav-header">
+      Menu
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="/pacientes" (click)="toggleSidenav()">
+        <mat-icon>person</mat-icon>
+        <span>Pacientes</span>
+      </a>
+
+      <a mat-list-item routerLink="/perguntas" (click)="toggleSidenav()">
+        <mat-icon>quiz</mat-icon>
+        <span>Perguntas</span>
+      </a>
+
+      <a mat-list-item routerLink="/historico" (click)="toggleSidenav()">
+        <mat-icon>history</mat-icon>
+        <span>Histórico</span>
+      </a>
+
+      <mat-divider></mat-divider>
+
+      <a mat-list-item (click)="toggleSidenav()">
+        <mat-icon>logout</mat-icon>
+        <span>Sair</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="topbar">
+      <button mat-icon-button (click)="toggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="toolbar-title">{{ title }}</span>
+    </mat-toolbar>
+
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
